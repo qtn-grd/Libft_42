@@ -48,8 +48,9 @@ BONUS = ft_lstadd_back.c \
 	ft_lstsize.c
 
 SRCS = ${PART1} ${PART2}
-OBJS = ${SRCS:.c=.o}
-OBJBNS= ${BONUS:.c=.o}
+OBJDIR = Objets
+OBJS = ${SRCS:%.c=${OBJDIR}/%.o}
+OBJBNS= ${BONUS:%.c=${OBJDIR}/%.o}
 DEPS = ${OBJS:.o=.d} ${OBJBNS:.o=.d}
 
 CC = gcc
@@ -60,24 +61,25 @@ all: ${NAME}
 
 ${NAME}: ${OBJS}
 	ar rcs ${NAME} ${OBJS}
-	rm -f .bonus
 
-bonus: .bonus
+bonus: ${OBJS} ${OBJBNS}
+	ar rcu ${NAME} ${OBJBNS}
 
-.bonus: ${OBJS} ${OBJBNS}
-	ar rcs ${NAME} ${OBJS} ${OBJBNS}
-	touch .bonus
+
+${OBJDIR}/%.o: %.c | ${OBJDIR}
+	${CC} ${CFLAGS} -c $< -o $@
+
+${OBJDIR}:
+	mkdir -p ${OBJDIR}
+
 
 clean:
-	rm -f ${OBJS} ${OBJBNS} ${DEPS}
+	rm -rf ${OBJDIR}
 
 fclean: clean
-	rm -f ${NAME} .bonus
+	rm -f ${NAME}
 
 re: fclean all
-
-%.o: %.c
-	${CC} ${CFLAGS} -c $< -o $@
 
 
 -include ${DEPS}
