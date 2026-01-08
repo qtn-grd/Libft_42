@@ -10,6 +10,7 @@ The goal of this project is to build a personal C library containing reimplement
 
 <details>
 <summary> 😶‍🌫️ ft_atoi</summary>
+</br>
     Converts a string representing a number into an integer.
     The function skips leading whitespaces, handles an optional '+' or '-' sign, and converts consecutive numeric characters into an `int` value.
     Behavior is undefined in case of overflow, just like the original `atoi`.
@@ -165,13 +166,13 @@ The 🎗️ bonus part focuses on implementing utility functions to manipulate
 linked lists using a custom structure.
 
 
-## _Instructions_
+## 📖   _Instructions_ 
 
 Useful commands are listed inside the _Makefile_, such as __make / make re / make clean / make fclean__.
 Bonus files must be compiled separately using the __bonus__ command.
 
 
-## _Resources_
+## 🧟   _Resources_ 
 
 Working on this project helped me discover many useful tools and their functionalities, and also develop reflection on the necessity of securing every part of your code.
 
