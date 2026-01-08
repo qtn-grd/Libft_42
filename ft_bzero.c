@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qgairaud <qgairaud@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: quentin <quentin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 16:07:17 by qgairaud          #+#    #+#             */
-/*   Updated: 2025/11/22 16:40:07 by qgairaud         ###   ########lyon.fr   */
+/*   Updated: 2026/01/07 18:19:58 by quentin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 void	ft_bzero(void *s, size_t n)
 {
 	size_t			i;
-	unsigned char	*p;
+	unsigned char	*str;
 
 	i = 0;
-	p = (unsigned char *)s;
+	str = (unsigned char *)s;
 	while (i < n)
 	{
-		p[i] = 0;
+		str[i] = 0;
 		i++;
 	}
 }
