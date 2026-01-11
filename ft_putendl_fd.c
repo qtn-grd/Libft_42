@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qgairaud <qgairaud@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: quentin <quentin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 19:06:06 by qgairaud          #+#    #+#             */
-/*   Updated: 2025/11/18 11:52:48 by qgairaud         ###   ########lyon.fr   */
+/*   Updated: 2026/01/11 15:45:08 by quentin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	if (!s)
