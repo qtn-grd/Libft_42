@@ -234,46 +234,58 @@ linked lists using a custom structure.
 <details>
 <summary> 😶‍🌫️ ft_lstnew</summary>
 </br>
+    Creates a new list node and initializes its content with the given value.
+    The node is not linked to any other.
 </details>
 </br>
 <details>
 <summary> 😶‍🌫️ ft_lstadd_front</summary>
 </br>
+    Adds a node at the beginning of a list.
 </details>
 </br>
 <details>
 <summary> 😶‍🌫️ ft_lstlast</summary>
 </br>
+    Returns the last node of a list.
 </details>
 </br>
 <details>
 <summary> 😶‍🌫️ ft_lstadd_back</summary>
 </br>
+    Adds a node at the end of a list.
 </details>
 </br>
 <details>
 <summary> 😶‍🌫️ ft_lstsize</summary>
 </br>
+    Returns the number of nodes in a list.
 </details>
 </br>
 <details>
 <summary> 😶‍🌫️ ft_lstiter</summary>
 </br>
+    Applies a function to the content of each node in a list.
 </details>
 </br>
 <details>
 <summary> 😶‍🌫️ ft_lstdelone</summary>
 </br>
+    Deletes a single node using the given function to free its content.
 </details>
 </br>
 <details>
 <summary> 😶‍🌫️ ft_lstclear</summary>
 </br>
+    Deletes and frees all nodes of a list using the given function,
+    and sets the list pointer to NULL.
 </details>
 </br>
 <details>
 <summary> 😶‍🌫️ ft_lstmap</summary>
 </br>
+    Creates a new list by applying a function to the content of each node
+    of an existing list. If an allocation fails, the new list is properly freed.
 </details>
 </br>
 
